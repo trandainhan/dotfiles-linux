@@ -424,6 +424,7 @@ Plug 'neomake/neomake'
 Plug 'ycm-core/YouCompleteMe'
 Plug 'ycm-core/YouCompleteMe'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rails'
 
 call plug#end()
 
