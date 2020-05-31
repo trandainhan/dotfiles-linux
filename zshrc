@@ -117,11 +117,12 @@ alias cl="clear"
 alias kb="kubectl"
 # Kubernetes switch ENV between prod - staging
 
+# enable vi mode in zsh
+# must before fzf otherwise fzf completions wont works
+bindkey -v
 
+# make fzf completions
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
-
-# enable vi mode in zsh
-bindkey -v
