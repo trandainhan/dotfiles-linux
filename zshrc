@@ -120,6 +120,8 @@ alias kb="kubectl"
 # enable vi mode in zsh
 # must before fzf otherwise fzf completions wont works
 bindkey -v
+# https://superuser.com/questions/476532/how-can-i-make-zshs-vi-mode-behave-more-like-bashs-vi-mode
+bindkey "^?" backward-delete-char
 
 # make fzf completions
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
