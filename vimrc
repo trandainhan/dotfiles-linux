@@ -422,7 +422,6 @@ Plug 'rking/ag.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'neomake/neomake'
 Plug 'ycm-core/YouCompleteMe'
-Plug 'ycm-core/YouCompleteMe'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rails'
 
@@ -459,7 +458,11 @@ set number
 set ttimeoutlen=0
 
 " dont unwrap long line
-" set wrap!
+set wrap!
+
+" enable for folding by language syntax
+set foldmethod=syntax
+set foldlevel=20
 
 " Pluging config
 source ~/.vim/tmux-navigator.vim
