@@ -12,3 +12,6 @@ nnoremap ,; :NERDTreeFocus<CR>
 " auto open nerdtree when open vim with out file specified
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" hide help menu on top of nerdtree
+let NERDTreeMinimalUI=1

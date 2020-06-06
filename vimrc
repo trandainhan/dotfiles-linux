@@ -1,4 +1,3 @@
- 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Sections:
 "    -> General
@@ -424,12 +423,13 @@ Plug 'neomake/neomake'
 Plug 'ycm-core/YouCompleteMe'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rails'
+Plug 'itchyny/lightline.vim'
 
 call plug#end()
 
 " Split vim screen
-map vv <C-w>v<CR>
-map ss <C-w>s<CR> 
+map vv <C-w>v<CR><CR>
+map ss <C-w>s<CR><CR>
 
 " Cursor setting
 if has("autocmd")
@@ -464,9 +464,13 @@ set wrap!
 set foldmethod=syntax
 set foldlevel=20
 
+" disable tabline on top of vim window
+set showtabline=0
+
 " Pluging config
 source ~/.vim/tmux-navigator.vim
 source ~/.vim/ctrlp.vim
 source ~/.vim/ag.vim
 source ~/.vim/nerdtree.vim
 source ~/.vim/neomake.vim
+source ~/.vim/youcompleteme.vim

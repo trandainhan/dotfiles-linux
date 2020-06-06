@@ -131,3 +131,7 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 # kubectl auto complete
 source <(kubectl completion zsh)
+
+# rvm use as command
+# https://stackoverflow.com/questions/23963018/rvm-is-not-a-function-selecting-rubies-with-rvm-use-will-not-work
+source ~/.rvm/scripts/rvm
