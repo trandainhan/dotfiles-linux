@@ -15,3 +15,4 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " hide help menu on top of nerdtree
 let NERDTreeMinimalUI=1
+let NERDTreeDirArrows = 1

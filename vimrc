@@ -424,6 +424,7 @@ Plug 'ycm-core/YouCompleteMe'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rails'
 Plug 'itchyny/lightline.vim'
+Plug 'jistr/vim-nerdtree-tabs'
 
 call plug#end()
 
@@ -472,5 +473,6 @@ source ~/.vim/tmux-navigator.vim
 source ~/.vim/ctrlp.vim
 source ~/.vim/ag.vim
 source ~/.vim/nerdtree.vim
+source ~/.vim/nerdtree-tabs.vim
 source ~/.vim/neomake.vim
 source ~/.vim/youcompleteme.vim
