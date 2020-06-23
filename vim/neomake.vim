@@ -12,8 +12,10 @@ call neomake#configure#automake('rw', 1000)
 
 let g:neomake_open_list = 2
 let g:neomake_list_height = 5
-" let g:neomake_python_pep8_exe = 'python3'
-" let g:neomake_python_enabled_makers = ['pep8']
-"
-:command NDTab NeomakeDisableTab
-:command NETab NeomakeEnableTab
+" let g:neomake_python_enabled_makers = ['flake8']
+
+:command NeoDTab NeomakeDisableTab
+:command NeoETab NeomakeEnableTab
+
+hi NeomakeWarningMsg ctermfg=lightblue ctermbg=none
+highlight link NeomakeWarning NeomakeWarningMsg
