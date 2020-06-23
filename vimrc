@@ -344,13 +344,13 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'rking/ag.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'neomake/neomake'
 Plug 'ycm-core/YouCompleteMe'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rails'
 Plug 'itchyny/lightline.vim'
 Plug 'jistr/vim-nerdtree-tabs'
-Plug 'nvie/vim-flake8'
+Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+Plug 'dense-analysis/ale'
 
 call plug#end()
 
@@ -418,6 +418,6 @@ source ~/.vim/ctrlp.vim
 source ~/.vim/ag.vim
 source ~/.vim/nerdtree.vim
 source ~/.vim/nerdtree-tabs.vim
-source ~/.vim/neomake.vim
 source ~/.vim/youcompleteme.vim
-source ~/.vim/vim-flake8.vim
+source ~/.vim/ale.vim
+source ~/.vim/go.vim
