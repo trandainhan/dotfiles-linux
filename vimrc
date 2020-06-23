@@ -350,6 +350,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rails'
 Plug 'itchyny/lightline.vim'
 Plug 'jistr/vim-nerdtree-tabs'
+Plug 'nvie/vim-flake8'
 
 call plug#end()
 
@@ -419,3 +420,4 @@ source ~/.vim/nerdtree.vim
 source ~/.vim/nerdtree-tabs.vim
 source ~/.vim/neomake.vim
 source ~/.vim/youcompleteme.vim
+source ~/.vim/vim-flake8.vim
