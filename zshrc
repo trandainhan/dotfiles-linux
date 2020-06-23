@@ -135,3 +135,13 @@ source <(kubectl completion zsh)
 # rvm use as command
 # https://stackoverflow.com/questions/23963018/rvm-is-not-a-function-selecting-rubies-with-rvm-use-will-not-work
 source ~/.rvm/scripts/rvm
+
+__kube_ps1()
+{
+    CONTEXT=$(kubectl config current-context)
+    if [ -n "$CONTEXT" ]; then
+        echo "k8s:(${CONTEXT})"
+    fi
+}
+
+export PS1=$PS1%F{34}$"(__kube_ps1)%f "
