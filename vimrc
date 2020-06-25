@@ -426,6 +426,6 @@ source ~/.vim/ctrlp.vim
 source ~/.vim/ag.vim
 source ~/.vim/nerdtree.vim
 source ~/.vim/nerdtree-tabs.vim
-source ~/.vim/youcompleteme.vim
 source ~/.vim/ale.vim
 source ~/.vim/go.vim
+source ~/.vim/deoplete.vim
