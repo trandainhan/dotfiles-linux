@@ -428,3 +428,6 @@ source ~/.vim/nerdtree.vim
 source ~/.vim/nerdtree-tabs.vim
 source ~/.vim/ale.vim
 source ~/.vim/deoplete.vim
+
+"highlight
+source ~/.vim/highlight.vim
