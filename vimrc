@@ -400,7 +400,7 @@ set foldmethod=syntax
 set foldlevel=20
 
 " disable tabline on top of vim window
-set showtabline=1
+set showtabline=2
 
 " switchbuf control, open file from quickfix to current tab
 set switchbuf=useopen
@@ -418,7 +418,7 @@ nnoremap <leader>8 8gt
 nnoremap <leader>9 9gt
 
 " quickfix
-map co :copen<CR>
+map <leader>co :copen<CR>
 
 " Pluging config
 source ~/.vim/tmux-navigator.vim
@@ -427,5 +427,4 @@ source ~/.vim/ag.vim
 source ~/.vim/nerdtree.vim
 source ~/.vim/nerdtree-tabs.vim
 source ~/.vim/ale.vim
-source ~/.vim/go.vim
 source ~/.vim/deoplete.vim
