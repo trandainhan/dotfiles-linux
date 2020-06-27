@@ -29,7 +29,7 @@ These files below is enough for full working environment
 
 - Nerdtree and Nerdtre-tabs
 - Ag
-- YouCompleteMe
+- Deoplete
 - CtrlP
-- Neomake
 - Tmux-navigator
+- Ale
