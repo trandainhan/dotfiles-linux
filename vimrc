@@ -381,7 +381,11 @@ endif
 " Clipboard
 " Install vim-gtk if you are using linux system
 " also check x11 is installed or not: vim --version | grep x11
-set clipboard=unnamedplus
+if has('mac') || has('macunix')
+  set clipboard=unnamed
+else
+  set clipboard=unnamedplus
+endif
 
 " Search highlight
 nnoremap <Esc> :noh<CR>
