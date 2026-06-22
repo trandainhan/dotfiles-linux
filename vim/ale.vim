@@ -23,6 +23,13 @@ call ale#linter#Define('ruby', {
 
 let g:ale_linters = {
             \'go': ['gobuild', 'golangci-lint'],
-            \'ruby': ['ruby', 'rubocop', 'brakeman', 'debribe', 'ruby-lint']
+            \'ruby': ['ruby', 'rubocop', 'brakeman', 'debribe', 'ruby-lint'],
+            \'python': ['ruff', 'mypy']
             \}
+
+let g:ale_fixers = {
+            \'python': ['ruff', 'ruff_format']
+            \}
+
+let g:ale_fix_on_save = 1
 

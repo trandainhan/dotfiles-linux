@@ -338,27 +338,16 @@ endfunction
 call plug#begin('~/.vim/plugged')
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'preservim/nerdtree'  
+Plug 'junegunn/fzf.vim'
+Plug 'preservim/nerdtree'
 Plug 'tomtom/tcomment_vim'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'rking/ag.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rails'
 Plug 'itchyny/lightline.vim'
-Plug 'jistr/vim-nerdtree-tabs'
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 Plug 'dense-analysis/ale'
-
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
-Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
 
 call plug#end()
 
@@ -366,17 +355,10 @@ call plug#end()
 map vv <C-w>v<CR><CR>
 map ss <C-w>s<CR><CR>
 
-" Cursor setting
-if has("autocmd")
-    au VimEnter,InsertLeave * silent execute '!echo -ne "\e[2 q"' | redraw!
-    au InsertEnter,InsertChange *
-                \ if v:insertmode == 'i' | 
-                \   silent execute '!echo -ne "\e[6 q"' | redraw! |
-                \ elseif v:insertmode == 'r' |
-                \   silent execute '!echo -ne "\e[4 q"' | redraw! |
-                \ endif
-    au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
-endif
+" Cursor shape per mode (no external process, no flicker)
+let &t_SI = "\e[6 q"
+let &t_SR = "\e[4 q"
+let &t_EI = "\e[2 q"
 
 " Clipboard
 " Install vim-gtk if you are using linux system
@@ -426,12 +408,10 @@ map <leader>co :copen<CR>
 
 " Pluging config
 source ~/.vim/tmux-navigator.vim
-source ~/.vim/ctrlp.vim
-source ~/.vim/ag.vim
+source ~/.vim/fzf.vim
 source ~/.vim/nerdtree.vim
-source ~/.vim/nerdtree-tabs.vim
 source ~/.vim/ale.vim
-source ~/.vim/deoplete.vim
+source ~/.vim/python.vim
 
 "highlight
 source ~/.vim/highlight.vim
